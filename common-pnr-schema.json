@@ -1,0 +1,2410 @@
+{
+  "type": "object",
+  "id": "urn:jsonschema:com:lumina:pnr:model:GdsPnr",
+  "properties": {
+    "downloadRequest": {
+      "type": "object",
+      "id": "urn:jsonschema:com:lumina:pnr:model:DownloadRequest",
+      "properties": {
+        "gdsType": {
+          "type": "string",
+          "enum": [
+            "AMADEUS",
+            "SABRE",
+            "TRAVELPORT",
+            "THN",
+            "EAN",
+            "MANUAL",
+            "TRAVELSKY"
+          ]
+        },
+        "pnr": {
+          "type": "string"
+        },
+        "userName": {
+          "type": "string"
+        },
+        "companyCode": {
+          "type": "string"
+        },
+        "queueNumber": {
+          "type": "string"
+        },
+        "universalLocatorCode": {
+          "type": "string"
+        },
+        "pseudoCityCode": {
+          "type": "string"
+        },
+        "synchronous": {
+          "type": "boolean"
+        },
+        "simple": {
+          "type": "boolean"
+        },
+        "shouldChangeContext": {
+          "type": "boolean"
+        },
+        "creationTime": {
+          "type": "long"
+        },
+        "processStartTime": {
+          "type": "long"
+        },
+        "processStopTime": {
+          "type": "long"
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "ITINERARY",
+              "NAME",
+              "PHONE",
+              "RECEIVEDFROM",
+              "TICKETING",
+              "PASSENGERADDRESS",
+              "PASSENGERDETAIL",
+              "PNRRESERVEDSEATS",
+              "HOSTFACTS",
+              "GENERALFACTS",
+              "AGENCYACCOUNTINGDATA",
+              "REMARKS",
+              "FREQUENTTRAVELER",
+              "MISTICKETING",
+              "USER",
+              "QUEUE"
+            ]
+          }
+        }
+      }
+    },
+    "newPnr": {
+      "type": "boolean"
+    },
+    "gdsType": {
+      "type": "string",
+      "enum": [
+        "AMADEUS",
+        "SABRE",
+        "TRAVELPORT",
+        "THN",
+        "EAN",
+        "MANUAL",
+        "TRAVELSKY"
+      ]
+    },
+    "pnrLocator": {
+      "type": "string"
+    },
+    "originatingPcc": {
+      "type": "string"
+    },
+    "issuingPcc": {
+      "type": "string"
+    },
+    "bookingReference": {
+      "type": "string"
+    },
+    "companyCode": {
+      "type": "string"
+    },
+    "obt": {
+      "type": "string"
+    },
+    "department": {
+      "type": "string"
+    },
+    "bookingDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ticketByDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "bookingMethod": {
+      "type": "string"
+    },
+    "userName": {
+      "type": "string"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "iataNumber": {
+      "type": "string"
+    },
+    "companyGuid": {
+      "type": "string"
+    },
+    "itineraryReasonCode": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "gdsPassengers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsPassenger",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lineNumber": {
+            "type": "integer"
+          },
+          "nameNumber": {
+            "type": "string"
+          },
+          "name": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:GdsName",
+            "properties": {
+              "nameTitle": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "firstName": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              },
+              "fullName": {
+                "type": "string"
+              },
+              "initial": {
+                "type": "string"
+              }
+            }
+          },
+          "type": {
+            "type": "string"
+          },
+          "externalProfileId": {
+            "type": "string"
+          },
+          "dateOfBirth": {
+            "type": "string"
+          },
+          "profileCode": {
+            "type": "string"
+          },
+          "employeeCode": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "sex": {
+            "type": "string"
+          },
+          "homeCity": {
+            "type": "string"
+          },
+          "passengerGuid": {
+            "type": "string"
+          },
+          "costCentreDetail": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:CostCentreDetail",
+            "properties": {
+              "category": {
+                "type": "string"
+              },
+              "group": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          },
+          "nameTitle": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsAirSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsAirSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "flightTimeInMinutes": {
+            "type": "integer"
+          },
+          "numberOfMiles": {
+            "type": "integer"
+          },
+          "numberOfStops": {
+            "type": "integer"
+          },
+          "airlineRecloc": {
+            "type": "string"
+          },
+          "flightNumber": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "marketingAirlineCarrierName": {
+            "type": "string"
+          },
+          "classCode": {
+            "type": "string"
+          },
+          "departureCityCode": {
+            "type": "string"
+          },
+          "arrivalCityCode": {
+            "type": "string"
+          },
+          "intermediateCityCode": {
+            "type": "string"
+          },
+          "equipment": {
+            "type": "string"
+          },
+          "mealCode": {
+            "type": "string"
+          },
+          "departureTerminal": {
+            "type": "string"
+          },
+          "arrivalTerminal": {
+            "type": "string"
+          },
+          "affiliatedCarrierName": {
+            "type": "string"
+          },
+          "affiliatedCarrierCode": {
+            "type": "string"
+          },
+          "baggageAllowance": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:BaggageAllowance",
+            "properties": {
+              "reference": {
+                "type": "string"
+              },
+              "references": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "PIECES",
+                  "WEIGHT",
+                  "NIL"
+                ]
+              },
+              "weightUnit": {
+                "type": "string",
+                "enum": [
+                  "KILOGRAMS",
+                  "POUNDS"
+                ]
+              },
+              "allowance": {
+                "type": "integer"
+              },
+              "includedBaggage": {
+                "type": "boolean"
+              }
+            }
+          },
+          "departureDateTime": {
+            "type": "string"
+          },
+          "localDepartureDateTime": {
+            "type": "string"
+          },
+          "utcDepartureDateTime": {
+            "type": "string"
+          },
+          "arrivalDateTime": {
+            "type": "string"
+          },
+          "localArrivalDateTime": {
+            "type": "string"
+          },
+          "utcArrivalDateTime": {
+            "type": "string"
+          },
+          "arunk": {
+            "type": "boolean"
+          },
+          "stopOver": {
+            "type": "boolean"
+          },
+          "viaFlightNumber": {
+            "type": "string"
+          },
+          "viaDepartureDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reasonCode": {
+            "type": "string"
+          },
+          "fareBasisCode": {
+            "type": "string"
+          },
+          "noOfPassengers": {
+            "type": "string"
+          },
+          "marriageGrp": {
+            "type": "integer"
+          },
+          "openSegment": {
+            "type": "boolean"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          },
+          "passiveSegment": {
+            "type": "boolean"
+          },
+          "cabinClass": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsCarSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsCarSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerCrsCode": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          },
+          "confirmationNumber": {
+            "type": "string"
+          },
+          "originalRate": {
+            "type": "string"
+          },
+          "rateChangeComment": {
+            "type": "string"
+          },
+          "rateBasis": {
+            "type": "string"
+          },
+          "rateBasisType": {
+            "type": "string",
+            "enum": [
+              "PER_NIGHT",
+              "PER_DAY",
+              "PER_PAX",
+              "PER_SERVICE",
+              "PER_HOUR",
+              "PER_WEEK",
+              "PER_MONTH",
+              "PER_PAX_PER_NIGHT",
+              "PER_PAX_PER_DAY",
+              "PER_PAX_PER_WEEK",
+              "PER_PAX_PER_MONTH"
+            ]
+          },
+          "rate": {
+            "type": "string"
+          },
+          "totalRate": {
+            "type": "string"
+          },
+          "firstDate": {
+            "type": "string"
+          },
+          "finalDate": {
+            "type": "string"
+          },
+          "localPickupDateTime": {
+            "type": "string"
+          },
+          "utcPickupDateTime": {
+            "type": "string"
+          },
+          "localDropoffDateTime": {
+            "type": "string"
+          },
+          "utcDropoffDateTime": {
+            "type": "string"
+          },
+          "consultantComment": {
+            "type": "string"
+          },
+          "membershipAccount": {
+            "type": "string"
+          },
+          "costingChargableFlag": {
+            "type": "string"
+          },
+          "bookingAgent": {
+            "type": "string"
+          },
+          "specialSvcInformation": {
+            "type": "string"
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "onRequest": {
+            "type": "boolean"
+          },
+          "commissionable": {
+            "type": "boolean"
+          },
+          "segmentRateCommission": {
+            "type": "string"
+          },
+          "guaranteeInfo": {
+            "type": "string"
+          },
+          "gdsIncidentals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "id": "urn:jsonschema:com:lumina:pnr:model:GdsIncidental",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "carType": {
+            "type": "string"
+          },
+          "rateType": {
+            "type": "string"
+          },
+          "specialEquipmentRequest": {
+            "type": "string"
+          },
+          "distanceType": {
+            "type": "string",
+            "enum": [
+              "LIMITED_KILOMETRES",
+              "UNLIMITED_KILOMETRES",
+              "LIMITED_MILES",
+              "UNLIMITED_MILES"
+            ]
+          },
+          "milesAllowed": {
+            "type": "integer"
+          },
+          "monthlyUnits": {
+            "type": "integer"
+          },
+          "weeklyUnits": {
+            "type": "integer"
+          },
+          "weekendUnits": {
+            "type": "integer"
+          },
+          "dailyUnits": {
+            "type": "integer"
+          },
+          "extraDayRateAmount": {
+            "type": "string"
+          },
+          "extraMileRateAmount": {
+            "type": "string"
+          },
+          "approxTotal": {
+            "type": "string"
+          },
+          "additionalMandatoryCharges": {
+            "type": "string"
+          },
+          "approximateTotalRateString": {
+            "type": "string"
+          },
+          "rateString": {
+            "type": "string"
+          },
+          "membershipNumber": {
+            "type": "string"
+          },
+          "vendorPickupLocation": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:GdsCarVendorLocationInfo",
+            "properties": {
+              "vendorCode": {
+                "type": "string"
+              },
+              "vendorName": {
+                "type": "string"
+              },
+              "rentalDeskLocation": {
+                "type": "string"
+              },
+              "locationOwner": {
+                "type": "string"
+              },
+              "cityCode": {
+                "type": "string"
+              },
+              "locationCode": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "object",
+                "id": "urn:jsonschema:com:lumina:pnr:model:GdsAddress",
+                "properties": {
+                  "buildingName": {
+                    "type": "string"
+                  },
+                  "addressLine1": {
+                    "type": "string"
+                  },
+                  "addressLine2": {
+                    "type": "string"
+                  },
+                  "suburb": {
+                    "type": "string"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "addressType": {
+                    "type": "string"
+                  },
+                  "countryCode": {
+                    "type": "string"
+                  },
+                  "postalZip": {
+                    "type": "string"
+                  }
+                }
+              },
+              "contact": {
+                "type": "object",
+                "id": "urn:jsonschema:com:lumina:pnr:model:GdsCarVendorLocationContact",
+                "properties": {
+                  "phoneNumber": {
+                    "type": "string"
+                  },
+                  "faxNumber": {
+                    "type": "string"
+                  },
+                  "emergencyPhoneNumber": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "vendorDropOffLocation": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsCarVendorLocationInfo"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "AIR",
+              "CAR",
+              "HOTEL",
+              "ARUNK",
+              "BUS",
+              "CRUISE",
+              "FERRY",
+              "RAIL",
+              "TOUR",
+              "TRANSFER",
+              "INSURANCE",
+              "MISC",
+              "EMS",
+              "UNKNOWN"
+            ]
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "serviceCode": {
+            "type": "string"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsHotelSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsHotelSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerCrsCode": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          },
+          "confirmationNumber": {
+            "type": "string"
+          },
+          "originalRate": {
+            "type": "string"
+          },
+          "rateChangeComment": {
+            "type": "string"
+          },
+          "rateBasis": {
+            "type": "string"
+          },
+          "rateBasisType": {
+            "type": "string",
+            "enum": [
+              "PER_NIGHT",
+              "PER_DAY",
+              "PER_PAX",
+              "PER_SERVICE",
+              "PER_HOUR",
+              "PER_WEEK",
+              "PER_MONTH",
+              "PER_PAX_PER_NIGHT",
+              "PER_PAX_PER_DAY",
+              "PER_PAX_PER_WEEK",
+              "PER_PAX_PER_MONTH"
+            ]
+          },
+          "rate": {
+            "type": "string"
+          },
+          "totalRate": {
+            "type": "string"
+          },
+          "firstDate": {
+            "type": "string"
+          },
+          "finalDate": {
+            "type": "string"
+          },
+          "localCheckinDateTime": {
+            "type": "string"
+          },
+          "utcCheckinDateTime": {
+            "type": "string"
+          },
+          "localCheckoutDateTime": {
+            "type": "string"
+          },
+          "utcCheckoutDateTime": {
+            "type": "string"
+          },
+          "consultantComment": {
+            "type": "string"
+          },
+          "membershipAccount": {
+            "type": "string"
+          },
+          "costingChargableFlag": {
+            "type": "string"
+          },
+          "bookingAgent": {
+            "type": "string"
+          },
+          "specialSvcInformation": {
+            "type": "string"
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "onRequest": {
+            "type": "boolean"
+          },
+          "commissionable": {
+            "type": "boolean"
+          },
+          "segmentRateCommission": {
+            "type": "string"
+          },
+          "guaranteeInfo": {
+            "type": "string"
+          },
+          "gdsIncidentals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsIncidental"
+            }
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "address": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsAddress"
+          },
+          "serviceCode": {
+            "type": "string"
+          },
+          "rateCode": {
+            "type": "string"
+          },
+          "chainCode": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "AIR",
+              "CAR",
+              "HOTEL",
+              "ARUNK",
+              "BUS",
+              "CRUISE",
+              "FERRY",
+              "RAIL",
+              "TOUR",
+              "TRANSFER",
+              "INSURANCE",
+              "MISC",
+              "EMS",
+              "UNKNOWN"
+            ]
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          },
+          "hotelName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsTransferSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsTransferSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerCrsCode": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          },
+          "confirmationNumber": {
+            "type": "string"
+          },
+          "originalRate": {
+            "type": "string"
+          },
+          "rateChangeComment": {
+            "type": "string"
+          },
+          "rateBasis": {
+            "type": "string"
+          },
+          "rateBasisType": {
+            "type": "string",
+            "enum": [
+              "PER_NIGHT",
+              "PER_DAY",
+              "PER_PAX",
+              "PER_SERVICE",
+              "PER_HOUR",
+              "PER_WEEK",
+              "PER_MONTH",
+              "PER_PAX_PER_NIGHT",
+              "PER_PAX_PER_DAY",
+              "PER_PAX_PER_WEEK",
+              "PER_PAX_PER_MONTH"
+            ]
+          },
+          "rate": {
+            "type": "string"
+          },
+          "totalRate": {
+            "type": "string"
+          },
+          "firstDate": {
+            "type": "string"
+          },
+          "finalDate": {
+            "type": "string"
+          },
+          "consultantComment": {
+            "type": "string"
+          },
+          "membershipAccount": {
+            "type": "string"
+          },
+          "costingChargableFlag": {
+            "type": "string"
+          },
+          "bookingAgent": {
+            "type": "string"
+          },
+          "specialSvcInformation": {
+            "type": "string"
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "onRequest": {
+            "type": "boolean"
+          },
+          "commissionable": {
+            "type": "boolean"
+          },
+          "segmentRateCommission": {
+            "type": "string"
+          },
+          "guaranteeInfo": {
+            "type": "string"
+          },
+          "gdsIncidentals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsIncidental"
+            }
+          },
+          "segmentType": {
+            "type": "string"
+          },
+          "serviceCode": {
+            "type": "string"
+          },
+          "vendorPickupLocation": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:GdsTransferVendorLocationInfo",
+            "properties": {
+              "vendorCode": {
+                "type": "string"
+              },
+              "vendorName": {
+                "type": "string"
+              },
+              "cityCode": {
+                "type": "string"
+              },
+              "locationCode": {
+                "type": "string"
+              },
+              "locationName": {
+                "type": "string"
+              },
+              "address": {
+                "type": "object",
+                "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsAddress"
+              }
+            }
+          },
+          "vendorDropOffLocation": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsTransferVendorLocationInfo"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "AIR",
+              "CAR",
+              "HOTEL",
+              "ARUNK",
+              "BUS",
+              "CRUISE",
+              "FERRY",
+              "RAIL",
+              "TOUR",
+              "TRANSFER",
+              "INSURANCE",
+              "MISC",
+              "EMS",
+              "UNKNOWN"
+            ]
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsRailSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsRailSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "duration": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "providerCrsCode": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          },
+          "confirmationNumber": {
+            "type": "string"
+          },
+          "originalRate": {
+            "type": "string"
+          },
+          "rateChangeComment": {
+            "type": "string"
+          },
+          "rateBasis": {
+            "type": "string"
+          },
+          "rateBasisType": {
+            "type": "string",
+            "enum": [
+              "PER_NIGHT",
+              "PER_DAY",
+              "PER_PAX",
+              "PER_SERVICE",
+              "PER_HOUR",
+              "PER_WEEK",
+              "PER_MONTH",
+              "PER_PAX_PER_NIGHT",
+              "PER_PAX_PER_DAY",
+              "PER_PAX_PER_WEEK",
+              "PER_PAX_PER_MONTH"
+            ]
+          },
+          "rate": {
+            "type": "string"
+          },
+          "totalRate": {
+            "type": "string"
+          },
+          "firstDate": {
+            "type": "string"
+          },
+          "finalDate": {
+            "type": "string"
+          },
+          "consultantComment": {
+            "type": "string"
+          },
+          "membershipAccount": {
+            "type": "string"
+          },
+          "costingChargableFlag": {
+            "type": "string"
+          },
+          "bookingAgent": {
+            "type": "string"
+          },
+          "specialSvcInformation": {
+            "type": "string"
+          },
+          "passive": {
+            "type": "boolean"
+          },
+          "onRequest": {
+            "type": "boolean"
+          },
+          "commissionable": {
+            "type": "boolean"
+          },
+          "segmentRateCommission": {
+            "type": "string"
+          },
+          "guaranteeInfo": {
+            "type": "string"
+          },
+          "gdsIncidentals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsIncidental"
+            }
+          },
+          "departureLocationInfo": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:GdsRailLocationInfo",
+            "properties": {
+              "cityCode": {
+                "type": "string"
+              },
+              "station": {
+                "type": "string"
+              },
+              "latitude": {
+                "type": "string"
+              },
+              "longitude": {
+                "type": "string"
+              }
+            }
+          },
+          "arrivalLocationInfo": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsRailLocationInfo"
+          },
+          "intermediateCityCode": {
+            "type": "string"
+          },
+          "numberOfStops": {
+            "type": "string"
+          },
+          "trainNumber": {
+            "type": "string"
+          },
+          "trainCode": {
+            "type": "string"
+          },
+          "trainName": {
+            "type": "string"
+          },
+          "seatNumber": {
+            "type": "string"
+          },
+          "coachNumber": {
+            "type": "integer"
+          },
+          "marketingCarrierCode": {
+            "type": "string"
+          },
+          "affiliatedCarrierCode": {
+            "type": "string"
+          },
+          "classOfService": {
+            "type": "string"
+          },
+          "recordLocator": {
+            "type": "string"
+          },
+          "fareBasisCode": {
+            "type": "string"
+          },
+          "travelTimeInMinutes": {
+            "type": "string"
+          },
+          "additionalCharges": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "AIR",
+              "CAR",
+              "HOTEL",
+              "ARUNK",
+              "BUS",
+              "CRUISE",
+              "FERRY",
+              "RAIL",
+              "TOUR",
+              "TRANSFER",
+              "INSURANCE",
+              "MISC",
+              "EMS",
+              "UNKNOWN"
+            ]
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "serviceCode": {
+            "type": "string"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsInsuranceSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsInsuranceSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "policyDescription": {
+            "type": "string"
+          },
+          "policyNumber": {
+            "type": "string"
+          },
+          "vendorCode": {
+            "type": "string"
+          },
+          "numberInParty": {
+            "type": "integer"
+          },
+          "departureCityCode": {
+            "type": "string"
+          },
+          "statusCode": {
+            "type": "string"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsProductSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsProductSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "productDescription": {
+            "type": "string"
+          },
+          "airlineRecLoc": {
+            "type": "string"
+          },
+          "subType": {
+            "type": "string"
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "numberInParty": {
+            "type": "integer"
+          },
+          "departureCityCode": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "statusCode": {
+            "type": "string"
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsAirFares": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsAirFare",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fareSource": {
+            "type": "string",
+            "enum": [
+              "GDS",
+              "PASSIVE",
+              "NDC"
+            ]
+          },
+          "totalFarePerPax": {
+            "type": "string"
+          },
+          "totalFareAmount": {
+            "type": "string"
+          },
+          "totalFareAmountText": {
+            "type": "string"
+          },
+          "totalFareGST": {
+            "type": "string"
+          },
+          "calculationArea": {
+            "type": "string"
+          },
+          "fareType": {
+            "type": "string"
+          },
+          "passengerType": {
+            "type": "string"
+          },
+          "platingCarrier": {
+            "type": "string"
+          },
+          "reissue": {
+            "type": "boolean"
+          },
+          "privateFare": {
+            "type": "boolean"
+          },
+          "privateFareCode": {
+            "type": "string"
+          },
+          "fareNumber": {
+            "type": "string"
+          },
+          "fareBasisCode": {
+            "type": "string"
+          },
+          "exemptedTaxes": {
+            "type": "string"
+          },
+          "ticketed": {
+            "type": "boolean"
+          },
+          "originalTicketNumber": {
+            "type": "string"
+          },
+          "gdsTaxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "id": "urn:jsonschema:com:lumina:pnr:model:GdsTax",
+              "properties": {
+                "reference": {
+                  "type": "string"
+                },
+                "references": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "taxCode": {
+                  "type": "string"
+                },
+                "taxAmount": {
+                  "type": "string"
+                },
+                "taxPaid": {
+                  "type": "boolean"
+                },
+                "gst": {
+                  "type": "boolean"
+                },
+                "notGST": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "sectorGdsTaxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsTax"
+            }
+          },
+          "baseFareAmountText": {
+            "type": "string"
+          },
+          "baseFareAmount": {
+            "type": "string"
+          },
+          "actualBaseFareAmount": {
+            "type": "string"
+          },
+          "tourCode": {
+            "type": "string"
+          },
+          "storedDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sectors": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "pricingInput": {
+            "type": "string"
+          },
+          "passive": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "gdsFareQuotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsFareQuote",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "calculationArea": {
+            "type": "string"
+          },
+          "platingCarrier": {
+            "type": "string"
+          },
+          "reissue": {
+            "type": "boolean"
+          },
+          "privateFare": {
+            "type": "boolean"
+          },
+          "fareNumber": {
+            "type": "string"
+          },
+          "fareBasisCode": {
+            "type": "string"
+          },
+          "gdsTaxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsTax"
+            }
+          },
+          "baseFareAmountText": {
+            "type": "string"
+          },
+          "baseFareAmount": {
+            "type": "string"
+          },
+          "actualBaseFareAmount": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsAirServiceSegments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsAirServiceSegment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "segmentLine": {
+            "type": "integer"
+          },
+          "supplierCode": {
+            "type": "string"
+          },
+          "sequenceNumber": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "firstDate": {
+            "type": "string"
+          },
+          "cityCode": {
+            "type": "string"
+          },
+          "reasonForIssuanceCode": {
+            "type": "string"
+          },
+          "reasonForIssuanceSubCode": {
+            "type": "string"
+          },
+          "serviceFeeDescription": {
+            "type": "string"
+          },
+          "name": {
+            "type": "object",
+            "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsName"
+          },
+          "providerDesignator": {
+            "type": "string"
+          },
+          "emdNumber": {
+            "type": "string"
+          },
+          "ticketNumber": {
+            "type": "string"
+          },
+          "originalBaseRate": {
+            "type": "string"
+          },
+          "totalRate": {
+            "type": "string"
+          },
+          "taxExempt": {
+            "type": "boolean"
+          },
+          "taxesIncluded": {
+            "type": "boolean"
+          },
+          "emdVoided": {
+            "type": "boolean"
+          },
+          "travelIndicator": {
+            "type": "string"
+          },
+          "commissionRate": {
+            "type": "string"
+          },
+          "commissionPercent": {
+            "type": "string"
+          },
+          "gdsTaxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsTax"
+            }
+          },
+          "finalLocation": {
+            "type": "string"
+          },
+          "firstLocation": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsAirSegmentSeats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsAirSegmentSeat",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "seatNumber": {
+            "type": "string"
+          },
+          "segmentNumber": {
+            "type": "string"
+          },
+          "seatChanged": {
+            "type": "string"
+          },
+          "paxNameNumber": {
+            "type": "string"
+          },
+          "originLocation": {
+            "type": "string"
+          },
+          "destinationLocation": {
+            "type": "string"
+          },
+          "segmentStatus": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "smokingPreference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsSectorPrices": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsSectorPrice",
+        "properties": {
+          "segmentId": {
+            "type": "integer"
+          },
+          "origin": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "segmentIds": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "segmentLineNums": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "bookingId": {
+            "type": "integer"
+          },
+          "pnrCode": {
+            "type": "string"
+          },
+          "crsCode": {
+            "type": "string"
+          },
+          "finalSectorPrice": {
+            "type": "number"
+          },
+          "derivedBy": {
+            "type": "string"
+          },
+          "baseFare": {
+            "type": "number"
+          },
+          "baseSource": {
+            "type": "string"
+          },
+          "totalTaxes": {
+            "type": "number"
+          },
+          "totalGst": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "number"
+          },
+          "discountId": {
+            "type": "integer"
+          },
+          "discountDeferred": {
+            "type": "number"
+          },
+          "throughFareSegments": {
+            "type": "string"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "modifiedBy": {
+            "type": "string"
+          },
+          "modifiedStamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "taxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "id": "urn:jsonschema:com:lumina:pnr:model:GdsSectorTax",
+              "properties": {
+                "taxCode": {
+                  "type": "string"
+                },
+                "taxValue": {
+                  "type": "number"
+                },
+                "gst": {
+                  "type": "string"
+                },
+                "gstApplicable": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "taxesNotFound": {
+            "type": "boolean"
+          },
+          "ffid": {
+            "type": "integer"
+          },
+          "reissue": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "gdsBookingReferences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsBookingReference",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsEvent",
+        "properties": {
+          "referenceType": {
+            "type": "string",
+            "enum": [
+              "PASSENGER",
+              "AIR_SEGMENT",
+              "HOTEL_SEGMENT",
+              "CAR_SEGMENT",
+              "INSURANCE_SEGMENT",
+              "PRODUCT_SEGMENT",
+              "FARE_QUOTE",
+              "TICKET",
+              "AIR_FARE",
+              "FOP",
+              "EMAIL",
+              "AIR_SERVICE_SEGMENT",
+              "AIR_SEGMENT_SEAT",
+              "TRANSFER_SEGMENT",
+              "FREQUENT_FLYER",
+              "FARE_TAX",
+              "SECTOR_TAX",
+              "AIR_SEGMENT_MEAL",
+              "REMARK",
+              "PHONE",
+              "RAIL_SEGMENT"
+            ]
+          },
+          "reference": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "COMPLETE",
+              "ERROR",
+              "WARN",
+              "TRACE"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "cause": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsFrequentFlyers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsFrequentFlyer",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "gdsStatusCode": {
+            "type": "string"
+          },
+          "owningCarrierCode": {
+            "type": "string"
+          },
+          "accountNumber": {
+            "type": "string"
+          },
+          "passengerName": {
+            "type": "string"
+          },
+          "freeText": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsFormOfPayments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsFormOfPayment",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gdsPaymentType": {
+            "type": "string",
+            "enum": [
+              "CASH",
+              "CREDIT",
+              "CHARGE",
+              "CHECK",
+              "VIRTUAL_CARD",
+              "PAY_LATER_PLAN",
+              "LOYALTY_PROGRAM_REDEMPTION",
+              "INVOICE",
+              "GTR",
+              "OTHER",
+              "TRAVEL_ACCOUNT",
+              "UNKNOWN"
+            ]
+          },
+          "creditCardUnique": {
+            "type": "integer"
+          },
+          "creditCardCode": {
+            "type": "string"
+          },
+          "creditCardNumber": {
+            "type": "string"
+          },
+          "creditCardExpiry": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "creditCardApprovalCode": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "string"
+          },
+          "gdsTaxes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsTax"
+            }
+          },
+          "fopUsedForHotelGuarantee": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "gdsEmails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsEmail",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gdsLineNo": {
+            "type": "integer"
+          },
+          "emailAddress": {
+            "type": "string"
+          },
+          "emailType": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsPhoneNumbers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsPhoneNumber",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gdsLineNo": {
+            "type": "integer"
+          },
+          "phoneNumber": {
+            "type": "string"
+          },
+          "phoneType": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsTickets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsTicket",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ticketType": {
+            "type": "string"
+          },
+          "ticketDesignator": {
+            "type": "string"
+          },
+          "ticketNumber": {
+            "type": "string"
+          },
+          "ticketStatus": {
+            "type": "string"
+          },
+          "soldDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "voidDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "soldUser": {
+            "type": "string"
+          },
+          "voidUser": {
+            "type": "string"
+          },
+          "accountCode": {
+            "type": "string"
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "airFareNumber": {
+            "type": "integer"
+          },
+          "conjunction": {
+            "type": "string"
+          },
+          "commissionPercent": {
+            "type": "string"
+          },
+          "commissionAmount": {
+            "type": "string"
+          },
+          "commissionPercentText": {
+            "type": "string"
+          },
+          "tourNumber": {
+            "type": "string"
+          },
+          "nrDealCode": {
+            "type": "string"
+          },
+          "nrCosting": {
+            "type": "boolean"
+          },
+          "nettFare": {
+            "type": "string"
+          },
+          "originalTicketDesignator": {
+            "type": "string"
+          },
+          "originalTicketNumber": {
+            "type": "string"
+          },
+          "originalTicketNumberConjunction": {
+            "type": "string"
+          },
+          "baseFareAmount": {
+            "type": "string"
+          },
+          "totalTaxAmount": {
+            "type": "string"
+          },
+          "equivalentFareAmount": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "gdsOBFee": {
+            "type": "object",
+            "id": "urn:jsonschema:com:lumina:pnr:model:GdsOBFee",
+            "properties": {
+              "amount": {
+                "type": "string"
+              },
+              "gst": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
+            }
+          },
+          "ticketMask": {
+            "type": "string"
+          },
+          "platingCarrier": {
+            "type": "string"
+          },
+          "endorsement": {
+            "type": "string"
+          },
+          "additionalCollection": {
+            "type": "string"
+          },
+          "customerId": {
+            "type": "string"
+          },
+          "iataNumber": {
+            "type": "string"
+          },
+          "exchangeIATANumber": {
+            "type": "string"
+          },
+          "originalIATANumber": {
+            "type": "string"
+          },
+          "exchangeIssueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "transactionPseudoCityCode": {
+            "type": "string"
+          },
+          "transactionAgent": {
+            "type": "string"
+          },
+          "exchangeTicketNumber": {
+            "type": "string"
+          },
+          "exchanged": {
+            "type": "boolean"
+          },
+          "vendorQcidMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "couponStatuses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "coupons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "id": "urn:jsonschema:com:lumina:pnr:model:TicketCoupon",
+              "properties": {
+                "number": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "airSegment": {
+                  "type": "object",
+                  "$ref": "urn:jsonschema:com:lumina:pnr:model:GdsAirSegment"
+                }
+              }
+            }
+          },
+          "approvalCode": {
+            "type": "string"
+          },
+          "emdRfsiCode": {
+            "type": "string"
+          },
+          "emdRfsicDescription": {
+            "type": "string"
+          },
+          "fareCalculationLine": {
+            "type": "string"
+          },
+          "suggestedSellingFareText": {
+            "type": "string"
+          },
+          "suggestedSellingPrice": {
+            "type": "string"
+          },
+          "void": {
+            "type": "boolean"
+          },
+          "emd": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "qciCodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsQciCode",
+        "properties": {
+          "gdsLineNumber": {
+            "type": "string"
+          },
+          "airlineCode": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "gdsAirSegmentMeals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:lumina:pnr:model:GdsAirSegmentMeal",
+        "properties": {
+          "reference": {
+            "type": "string"
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "mealCode": {
+            "type": "string"
+          },
+          "mealType": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "remarkFields": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "id": "urn:jsonschema:com:lumina:pnr:model:FileFinishingField",
+          "properties": {
+            "lineNumber": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "vendorLocator": {
+      "type": "string"
+    },
+    "gdsSegmentSavings": {
+      "type": "object",
+      "id": "urn:jsonschema:com:lumina:pnr:model:GdsSegmentSavings",
+      "properties": {
+        "airBenchmarkFare": {
+          "type": "string"
+        },
+        "hotelBenchmarkFare": {
+          "type": "string"
+        },
+        "hotelHighFare": {
+          "type": "string"
+        },
+        "hotelLowFare": {
+          "type": "string"
+        },
+        "hotelComplianceReasonCode": {
+          "type": "string"
+        },
+        "carBenchmarkFare": {
+          "type": "string"
+        },
+        "carHighFare": {
+          "type": "string"
+        },
+        "carLowFare": {
+          "type": "string"
+        },
+        "carComplianceReasonCode": {
+          "type": "string"
+        }
+      }
+    },
+    "travelDate": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
